@@ -10,9 +10,9 @@ router.post("/",async (req,res)=>{
          email:email,
          age:age,
         })
-        res.status(201).json({message:"user-added"})
+       return res.status(201).json({message:"user-added"})
     } catch (error) {
-     res.send(404).json(error)
+     return res.sendStatus(404).json(error)
     }
  })
 

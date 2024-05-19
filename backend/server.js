@@ -4,7 +4,8 @@ const app = express();
 const dotenv = require('dotenv')
 const userRouter = require("./routes/userRoute")
 dotenv.config();
-
+const cors = require('cors');
+app.use(cors());
 //middleware
 app.use(express.json())
 
